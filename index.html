@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>ByeWind</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="./images/Avatar-Name-Icon.svg" alt="logo">
+            </div>
+            <ul class="navbar">
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><img src="./images/Sidebar.svg" alt="Sidebar Icon"></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><img src="./images/Star.svg" alt="Star Icon"></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Dashboards / <span>Default</span></a>
+                </li>
+            </ul>
+            <ul class="navbar">
+                <li class="nav-item">
+                    <img src="./images/Search (1).svg" alt="Search Icon">
+                    <input type="search" placeholder="Search">
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><img src="./images/Sun.svg" alt="Sun Icon"></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><img src="./images/ClockCounterClockwise.svg"
+                            alt="ClockCounterClockwise Icon"></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><img src="./images/Bell.svg" alt="Bell Icon"></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><img src="./images/Sidebar.svg" alt="Sidebar Icon"></a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="left grid-col">
+            <div class="flex">
+                <p>Favorites</p>
+                <p>Recently</p>
+                <ul>
+                    <li>Overview</li>
+                    <li>Projects</li>
+                </ul>
+                <h1>Dashboards</h1>
+                <ul>
+                    <li><img src="./images/ChartPieSlice.svg" alt="ChartPieSlice Icon"> Default</li>
+                    <li><img src="./images/ShoppingBagOpen.svg" alt="ShoppingBagOpen Icon"> eCommerce</li>
+                    <li><img src="./images/FolderNotch.svg" alt="FolderNotch Icon"> Projects</li>
+                    <li><img src="./images/BookOpen.svg" alt="BookOpen Icon"> Online Courses</li>
+                </ul>
+                <h1>Pages</h1>
+                <ul>
+                    <li><img src="./images/IdentificationBadge.svg" alt="IdentificationBadge Icon"> User Profile</li>
+                    <ol>
+                        <li>Overview</li>
+                        <li>Projects</li>
+                        <li>Campaigns</li>
+                        <li>Documents</li>
+                        <li>Followers</li>
+                    </ol>
+                    <li><img src="./images/IdentificationCard.svg" alt="IdentificationCard Icon"> Account</li>
+                    <li><img src="./images/UsersThree.svg" alt="UsersThree Icon"> Corporate</li>
+                    <li><img src="./images/Notebook.svg" alt="Notebook Icon"> Blog</li>
+                    <li><img src="./images/Chats.svg" alt="Chats Icon"> Social</li>
+                </ul>
+            </div>
+            <img src="./images/Logo.svg" alt="Snow Logo">
+        </div>
+        <div class="center grid-col">
+            <h2>Today</h2>
+            <div class="sub-grid">
+                <h4>Views</h4>
+                <div class="flex">
+                    <h2>721K</h2>
+                    <div>
+                        <p>+11.01%</p>
+                        <img src="./images/ArrowRise.svg" alt="ArrowRise Icon">
+                    </div>
+                </div>
+            </div>
+            <div class="sub-grid">
+                <h4>Visits<h4>
+                        <div class="flex">
+                            <h2>367K</h2>
+                            <div>
+                                <p>+9.15%</p>
+                                <img src="./images/ArrowRise.svg" alt="ArrowRise Icon">
+                            </div>
+                        </div>
+            </div>
+            <div class="sub-grid">
+                <h4>New Users</h4>
+                <div class="flex">
+                    <h2>1,156K</h2>
+                    <div>
+                        <p>-0.56%</p>
+                        <img src="./images/ArrowRise.svg" alt="ArrowFall Icon">
+                    </div>
+                </div>
+            </div>
+            <div class="sub-grid">
+                <h4>Active Users</h4>
+                <div class="flex">
+                    <h2>239K</h2>
+                    <div>
+                        <p>-1.48%</p>
+                        <img src="./images/ArrowFall.svg" alt="ArrowFall Icon">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="chart">
+            <div class="flex">
+                <div class="flex">
+                    <p>Total Users</p>
+                    <p>Total Projects</p>
+                    <p>Operating Status</p>
+                </div>
+                <div class="flex">
+                    <ul>
+                        <li>Current Week</li>
+                        <li>Previous Week</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="chart-container" id="chartContainer">
+                <div class="curve-image">
+                    <img src="./images/chartblackline.svg" alt="Wavy Curve Image" class="curve-image">
+                    <img src="./images/chartblueline.svg" alt="Wavy curve-image">
+                </div>
+                <div class="axis-labels">
+                    <div class="y-axis-labels">
+                        <p>15m</p>
+                        <p>10m</p>
+                        <p>5m</p>
+                        <p>1</p>
+                        <p>0</p>
+                    </div>
+                    <div class="x-axis-labels">
+                        <p>Mon</p>
+                        <p>Tue</p>
+                        <p>Wed</p>
+                        <p>Thu</p>
+                        <p>Fri</p>
+                        <p>Sat</p>
+                        <p>Sun</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="socials">
+            <h2>Traffic by Website</h2>
+            <div class="flex">
+                <p>Google</p>
+                <div class="progress"></div>
+            </div>
+            <div class="flex">
+                <p>Youtube</p>
+                <div class="progress"></div>
+            </div>
+            <div class="flex">
+                <p>Instagram</p>
+                <div class="progress"></div>
+            </div>
+            <div class="flex">
+                <p>Pinterest</p>
+                <div class="progress"></div>
+            </div>
+            <div class="flex">
+                <p>Facebook</p>
+                <div class="progress"></div>
+            </div>
+            <div class="flex">
+                <p>Twitter</p>
+                <div class="progress"></div>
+            </div>
+            <div class="flex">
+                <p>Tumblr</p>
+                <div class="progress"></div>
+            </div>
+        </div>
+        <div class="traffic">
+            <div class="traffic-by-device">
+                <h2>Traffic by Device</h2>
+                <div class="axis-labels">
+                    <div class="y-axis-labels">
+                        <p>900k</p>
+                        <p>600k</p>
+                        <p>300k</p>
+                        <p>0</p>
+                    </div>
+                    <div class="x-axis-labels">
+                        <p>Linux</p>
+                        <p>Mac</p>
+                        <p>iOS</p>
+                        <p>Windows</p>
+                        <p>Andriod</p>
+                        <p>Others</p>
+                    </div>
+                </div>
+            </div>
+            <div class="traffic-by-location">
+                <h2>Traffic by Location</h2>
+                <div class="axis-labels">
+                    <div class="circle">
+                        <div>900k</div>
+                        <div>600k</div>
+                        <div>300k</div>
+                        <div>0</div>
+                    </div>
+                    <ul class="Location">
+                        <li>United State <span>38.6%</span></li>
+                        <li>Canada <span>22.5%</span></li>
+                        <li>Mexico <span>30.8%</span></li>
+                        <li>Other <span>81.1%</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="marketing">
+            <h2>Marketing & SEO</h2>
+            <div class="marketing-graph">
+                <p>15m</p>
+            </div>
+        </div>
+        <div class="right grid-col">
+            <div class="notification">
+                <h2>Notification</h2>
+                <div class="text-1">
+                    <div class="flex">
+                        <img src="./images/BugBeetle.svg" alt="BugBeetle Icon">
+                        <p>You have a bug that needs to be fixed.</p>
+                    </div>
+                    <time>5m ago</time>
+                </div>
+                <div class="text-1">
+                    <div class="flex">
+                        <img src="./images/User.svg" alt="User Icon">
+                        <p>New user registered</p>
+                    </div>
+                    <time>1:23 AM</time>
+                </div>
+                <div class="text-1">
+                    <div class="flex">
+                        <img src="./images/BugBeetle.svg" alt="BugBeetle Icon">
+                        <p>You have a bug that needs to be fixed.</p>
+                    </div>
+                    <time>0:32 AM</time>
+                </div>
+                <div class="text-1">
+                    <div class="flex">
+                        <img src="./images/Broadcast.svg" alt="Broadcast Icon">
+                        <p>Andi Lane subscribed to you</p>
+                    </div>
+                    <time>Yesterday 12:39 AM</time>
+                </div>
+            </div>
+            <div class="activities">
+                <h2>Activities</h2>
+                <div class="text-1">
+                    <div class="flex">
+                        <img src="./images/Avatar.svg" alt="Avatar Icon">
+                        <p>Edited the details of Project X</p>
+                    </div>
+                    <time>5m ago</time>
+                </div>
+                <div class="text-1">
+                    <div class="flex">
+                        <img src="./images/Avatar (1).svg" alt="Avatar-1 Icon">
+                        <p>Changed the status of Project X</p>
+                    </div>
+                    <time>1:32 AM</time>
+                </div>
+                <div class="text-1">
+                    <div class="flex">
+                        <img src="./images/Avatar (2).svg" alt="Avatar-2 Icon">
+                        <p>Submitted a bug</p>
+                    </div>
+                    <time>Yesterday 12:39 AM</time>
+                </div>
+                <div class="text-1">
+                    <div class="flex">
+                        <img src="./images/Avatar (3).svg" alt="Avatar-3 Icon">
+                        <p>Modified A data in Page X</p>
+                    </div>
+                    <time>Last Thursday 3:34 AM</time>
+                </div>
+                <div class="text-1">
+                    <div class="flex">
+                        <img src="./images/Avatar (4).svg" alt="Avatar-4 Icon">
+                        <p>Deleted a page in Project X</p>
+                    </div>
+                    <time>Aug 11</time>
+                </div>
+            </div>
+            <div class="contacts">
+                <h2>Contacts</h2>
+                <div class="flex">
+                    <img src="./images/Avatar (5).svg" alt="Avatar-5 Icon">
+                    <p>Natali Craig</p>
+                </div>
+                <div class="flex">
+                    <img src="./images/Avatar (6).svg" alt="Avatar-6 Icon">
+                    <p>Drew Cano</p>
+                </div>
+                <div class="flex">
+                    <img src="./images/Avatar (7).svg" alt="Avatar-7 Icon">
+                    <p>Orlando Diggs</p>
+                </div>
+                <div class="flex">
+                    <img src="./images/Avatar (8).svg" alt="Avatar-8 Icon">
+                    <p>Andi Lane</p>
+                </div>
+                <div class="flex">
+                    <img src="./images/Avatar (3).svg" alt="Avatar-3 Icon">
+                    <p>Kate Morrison</p>
+                </div>
+                <div class="flex">
+                    <img src="./images/Avatar (10).svg" alt="">
+                    <p>Koray Okumus</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+
+</html>
