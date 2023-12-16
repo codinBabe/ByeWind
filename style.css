@@ -5,6 +5,8 @@
   --black-5: rgba(0, 0, 0, 0.05);
   --Primary-Blue: #E3F5FF;
   --Primary-Purple: #E5ECF6;
+  --Primary-Light: #F7F9FB;
+  --Secondary-Blue:#A8C5DA;
 }
 
 *,*::before,*::after{
@@ -20,7 +22,7 @@ img{
     max-width: 100%;
 }
 .container{
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
     padding: 1.5em;
 }
@@ -165,4 +167,91 @@ margin-bottom: 1em;
 }
 .no-gap{
     gap: .2em;
+}
+.chart{
+border-radius: 16px;
+background: var(--Primary-Light);
+padding: 1.5em;
+margin-top: 1.5em;
+
+position: relative;
+}
+.chart-headings p:first-child{
+    font-weight: 600;
+}
+.chart-headings{
+color: var(--black-100);
+font-size: 0.55rem;
+font-weight: 400;
+line-height: 20px;
+}
+.chart-headings p:not(:first-child){
+    color: var(--black-40);
+}
+.chart-headings li:nth-child(2)::marker{
+    color: var(--Secondary-Blue);
+}
+.chart-headings li:last-child{
+list-style: none;
+}
+.y-axis-labels,.x-axis-labels{
+    display: flex;
+}
+.y-axis-labels p,.x-axis-labels p{
+  color: var(--black-40);
+  font-size: 0.55em;
+  line-height: 18px;
+}
+.y-axis-labels{
+    flex-direction: column;
+    gap: .8em;
+}
+.y-axis-labels p{
+    position: relative;
+}
+.y-axis-labels p::after{
+  content: '';
+  display: block;
+  width: 90%;
+  height: 1px; 
+  background-color:var(--black-5);
+  position: absolute;
+  bottom: 5px;
+  left: 10%; 
+}
+.x-axis-labels{
+    gap: 1.2em;
+    align-items: right;
+}
+.curve-image{
+    position: absolute;
+    bottom: 28%;
+    width: 80%;
+}
+.socials{
+    background-color: var(--Primary-Light);
+    margin-top: 1.5em;
+    border-radius: 16px;
+    padding: 1.5em;
+}
+.socials h2{
+color: var(--black-100);
+font-size: 0.75em;
+font-weight: 600;
+line-height: 20px;
+}
+.socials p{
+color: var(--black-100);
+font-size: 12px;
+font-weight: 400;
+line-height: 18px;
+}
+.socials>div{
+    margin-top: .8em;
+}
+.socials .progress {
+  width: 50%;
+  height: 8px; /* Adjust the height as needed */
+   background: linear-gradient(90deg, var(--progress-color, #4CAF50) 70%, transparent 70%);
+  border-radius: 4px;
 }
