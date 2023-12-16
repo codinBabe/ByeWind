@@ -1,3 +1,10 @@
+:root {
+  --black-100: #1C1C1C;
+  --black-40: rgba(0, 0, 0, 0.40);
+  --black-20: rgba(0, 0, 0, 0.20);
+  --black-5: rgba(0, 0, 0, 0.05);
+}
+
 *,*::before,*::after{
     margin:0;
     padding:0;
@@ -6,4 +13,109 @@
 }
 body{
     font-family: 'Inter', sans-serif;
+}
+img{
+    max-width: 100%;
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+    padding: 1.5em;
+}
+.nav{
+    text-align: center;
+}
+.navbar{
+    list-style: none;
+}
+.navbar li{
+    margin-top: 1em;
+}
+.navbar li a{
+    font-size: 0.875rem;
+    text-decoration: none;
+    color:var(--black-100);
+}
+.navbar input{
+    width: 60%;
+    border-radius: 8px;
+    border: none;
+    background: var(--black-5);
+    padding: 0.25em 1.5em;
+    outline: none;
+
+}
+.navbar input ::placeholder{
+color: var(--black-20);
+font-size: 0.875rem;
+font-weight: 400;
+line-height: 20px; /* 142.857% */
+}
+.search-container {
+      position: relative;
+    }
+.search-icon {
+      position: absolute;
+      top: 50%;
+      left: 60px;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+.active{
+    color: var(--black-40);
+}
+.flex{
+    display: flex;
+    gap: 1em;
+}
+.dropdown-menu p{
+color: var(--black-40);
+font-size: 0.875rem;
+line-height: 20px; /* 142.857% */
+}
+.dropdown-menu ul li{
+    margin: .5em;
+}
+.dropdown-menu ul li::marker{
+    color: var(--black-20);
+}
+.dropdown-menu p:last-child{
+    color: var(--black-20);
+}
+.dropdown-menu a, .dropdown-menu ul li{
+color: var(--black-100);
+font-size: 0.875em;
+line-height: 20px;
+text-decoration: none;
+}
+.dropdown-menu h1{
+color: var(--black-40);
+font-size: 0.875rem;
+line-height: 20px; /* 142.857% */
+}
+.dropdown-menu ul, .dropdown-content{
+    margin-bottom: 1.5em;
+}
+.dropdown-content a{
+    display: flex;
+    align-items: center;
+    gap: .5em;
+}
+.dropdown-content a::before{
+    content: url('./images/ArrowLineRight2.svg');
+    margin-right: .1em;
+}
+.pages-sub-dropdown{
+    margin-left: 3.4em;
+    text-align: center;
+}
+.pages-sub-dropdown a{
+    margin: .6em 0;
+}
+.pages-sub-dropdown a::before{
+    content: none;
+}
+.pages-sub-dropdown a:nth-child(2){
+border-radius: 8px;
+background: var(--black-5);
 }

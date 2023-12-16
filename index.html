@@ -12,8 +12,8 @@
 </head>
 
 <body>
-    <header>
-        <div class="container">
+    <header class="container">
+        <div class="nav">
             <div class="logo">
                 <img src="./images/Avatar-Name-Icon.svg" alt="logo">
             </div>
@@ -25,12 +25,12 @@
                     <a href="#" class="nav-link"><img src="./images/Star.svg" alt="Star Icon"></a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Dashboards / <span>Default</span></a>
+                    <a href="#" class="nav-link"> <span class="active">Dashboards</span> / Default</a>
                 </li>
             </ul>
             <ul class="navbar">
-                <li class="nav-item">
-                    <img src="./images/Search (1).svg" alt="Search Icon">
+                <li class="nav-item search-container">
+                    <img class="search-icon" src="./images/Search (1).svg" alt="Search Icon">
                     <input type="search" placeholder="Search">
                 </li>
                 <li class="nav-item">
@@ -49,37 +49,40 @@
             </ul>
         </div>
     </header>
-    <main>
+    <main class="container">
         <div class="left grid-col">
-            <div class="flex">
-                <p>Favorites</p>
-                <p>Recently</p>
+            <div class="dropdown-menu">
+                <div class="flex">
+                    <p>Favorites</p>
+                    <p>Recently</p>
+                </div>
                 <ul>
                     <li>Overview</li>
                     <li>Projects</li>
                 </ul>
                 <h1>Dashboards</h1>
-                <ul>
-                    <li><img src="./images/ChartPieSlice.svg" alt="ChartPieSlice Icon"> Default</li>
-                    <li><img src="./images/ShoppingBagOpen.svg" alt="ShoppingBagOpen Icon"> eCommerce</li>
-                    <li><img src="./images/FolderNotch.svg" alt="FolderNotch Icon"> Projects</li>
-                    <li><img src="./images/BookOpen.svg" alt="BookOpen Icon"> Online Courses</li>
-                </ul>
+                <div class="dropdown-content">
+                    <a href="#"><img src="./images/ChartPieSlice.svg" alt="ChartPieSlice Icon"> Default</a>
+                    <a href="#"><img src="./images/ShoppingBagOpen.svg" alt="ShoppingBagOpen Icon"> eCommerce</a>
+                    <a href="#"><img src="./images/FolderNotch.svg" alt="FolderNotch Icon"> Projects</a>
+                    <a href="#"><img src="./images/BookOpen.svg" alt="BookOpen Icon"> Online Courses</a>
+                </div>
                 <h1>Pages</h1>
-                <ul>
-                    <li><img src="./images/IdentificationBadge.svg" alt="IdentificationBadge Icon"> User Profile</li>
-                    <ol>
-                        <li>Overview</li>
-                        <li>Projects</li>
-                        <li>Campaigns</li>
-                        <li>Documents</li>
-                        <li>Followers</li>
-                    </ol>
-                    <li><img src="./images/IdentificationCard.svg" alt="IdentificationCard Icon"> Account</li>
-                    <li><img src="./images/UsersThree.svg" alt="UsersThree Icon"> Corporate</li>
-                    <li><img src="./images/Notebook.svg" alt="Notebook Icon"> Blog</li>
-                    <li><img src="./images/Chats.svg" alt="Chats Icon"> Social</li>
-                </ul>
+                <div class="dropdown-content">
+                    <a href="#"><img src="./images/IdentificationBadge.svg" alt="IdentificationBadge Icon"> User
+                        Profile</a>
+                    <div class="pages-sub-dropdown">
+                        <a href="#">Overview</a>
+                        <a href="#">Projects</a>
+                        <a href="#">Campaigns</a>
+                        <a href="#">Documents</a>
+                        <a href="#">Followers</a>
+                    </div>
+                    <a href="#"><img src="./images/IdentificationCard.svg" alt="IdentificationCard Icon"> Account</a>
+                    <a href="#"><img src="./images/UsersThree.svg" alt="UsersThree Icon"> Corporate</a>
+                    <a href="#"><img src="./images/Notebook.svg" alt="Notebook Icon"> Blog</a>
+                    <a href="#"><img src="./images/Chats.svg" alt="Chats Icon"> Social</a>
+                </div>
             </div>
             <img src="./images/Logo.svg" alt="Snow Logo">
         </div>
