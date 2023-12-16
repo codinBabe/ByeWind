@@ -106,11 +106,12 @@ line-height: 20px; /* 142.857% */
     margin-right: .1em;
 }
 .pages-sub-dropdown{
+    display: flex;
+    flex-direction: column;
     margin-left: 3.4em;
-    text-align: center;
 }
 .pages-sub-dropdown a{
-    margin: .6em 0;
+    margin: .2em 0;
 }
 .pages-sub-dropdown a::before{
     content: none;
@@ -118,4 +119,7 @@ line-height: 20px; /* 142.857% */
 .pages-sub-dropdown a:nth-child(2){
 border-radius: 8px;
 background: var(--black-5);
+display: flex;
+justify-content: center;
+padding: .4em 0;
 }
