@@ -176,31 +176,31 @@
             <h2>Traffic by Website</h2>
             <div class="flex">
                 <p>Google</p>
-                <div class="progress"></div>
+                <div class="progress" style="width: 60%;"></div>
             </div>
             <div class="flex">
                 <p>Youtube</p>
-                <div class="progress"></div>
+                <div class="progress" style="width: 40%;"></div>
             </div>
             <div class="flex">
                 <p>Instagram</p>
-                <div class="progress"></div>
+                <div class="progress dark" style="width: 50%;"></div>
             </div>
             <div class="flex">
                 <p>Pinterest</p>
-                <div class="progress"></div>
+                <div class="progress" style="width: 30%;"></div>
             </div>
             <div class="flex">
                 <p>Facebook</p>
-                <div class="progress"></div>
+                <div class="progress" style="width: 50%;"></div>
             </div>
             <div class="flex">
                 <p>Twitter</p>
-                <div class="progress"></div>
+                <div class="progress" style="width: 30%;"></div>
             </div>
             <div class="flex">
                 <p>Tumblr</p>
-                <div class="progress"></div>
+                <div class="progress" style="width: 50%;"></div>
             </div>
         </div>
         <div class="traffic">
@@ -216,137 +216,153 @@
                     <div class="x-axis-labels">
                         <p></p>
                         <p></p>
-                        <p>Linux</p>
-                        <p>Mac</p>
-                        <p>iOS</p>
-                        <p>Windows</p>
-                        <p>Andriod</p>
-                        <p>Others</p>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar linux"></div>
+                            <p>Linux</p>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar mac"></div>
+                            <p>Mac</p>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar ios"></div>
+                            <p>iOS</p>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar windows"></div>
+                            <p>Windows</p>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar andriod" style="height: 35px;"></div>
+                            <p>Andriod</p>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar others"></div>
+                            <p>Others</p>
+                        </div>
+                    </div>
+                    <div class="traffic-by-location">
+                        <h2>Traffic by Location</h2>
+                        <div class="axis-labels">
+                            <div class="circle">
+                                <div>900k</div>
+                                <div>600k</div>
+                                <div>300k</div>
+                                <div>0</div>
+                            </div>
+                            <ul class="Location">
+                                <li>United State <span>38.6%</span></li>
+                                <li>Canada <span>22.5%</span></li>
+                                <li>Mexico <span>30.8%</span></li>
+                                <li>Other <span>81.1%</span></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="traffic-by-location">
-                <h2>Traffic by Location</h2>
-                <div class="axis-labels">
-                    <div class="circle">
-                        <div>900k</div>
-                        <div>600k</div>
-                        <div>300k</div>
-                        <div>0</div>
+                <div class="marketing">
+                    <h2>Marketing & SEO</h2>
+                    <div class="marketing-graph">
+                        <p>15m</p>
                     </div>
-                    <ul class="Location">
-                        <li>United State <span>38.6%</span></li>
-                        <li>Canada <span>22.5%</span></li>
-                        <li>Mexico <span>30.8%</span></li>
-                        <li>Other <span>81.1%</span></li>
-                    </ul>
                 </div>
-            </div>
-        </div>
-        <div class="marketing">
-            <h2>Marketing & SEO</h2>
-            <div class="marketing-graph">
-                <p>15m</p>
-            </div>
-        </div>
-        <div class="right grid-col">
-            <div class="notification">
-                <h2>Notification</h2>
-                <div class="text-1">
-                    <div class="flex">
-                        <img src="./images/BugBeetle.svg" alt="BugBeetle Icon">
-                        <p>You have a bug that needs to be fixed.</p>
+                <div class="right grid-col">
+                    <div class="notification">
+                        <h2>Notification</h2>
+                        <div class="text-1">
+                            <div class="flex">
+                                <img src="./images/BugBeetle.svg" alt="BugBeetle Icon">
+                                <p>You have a bug that needs to be fixed.</p>
+                            </div>
+                            <time>5m ago</time>
+                        </div>
+                        <div class="text-1">
+                            <div class="flex">
+                                <img src="./images/User.svg" alt="User Icon">
+                                <p>New user registered</p>
+                            </div>
+                            <time>1:23 AM</time>
+                        </div>
+                        <div class="text-1">
+                            <div class="flex">
+                                <img src="./images/BugBeetle.svg" alt="BugBeetle Icon">
+                                <p>You have a bug that needs to be fixed.</p>
+                            </div>
+                            <time>0:32 AM</time>
+                        </div>
+                        <div class="text-1">
+                            <div class="flex">
+                                <img src="./images/Broadcast.svg" alt="Broadcast Icon">
+                                <p>Andi Lane subscribed to you</p>
+                            </div>
+                            <time>Yesterday 12:39 AM</time>
+                        </div>
                     </div>
-                    <time>5m ago</time>
-                </div>
-                <div class="text-1">
-                    <div class="flex">
-                        <img src="./images/User.svg" alt="User Icon">
-                        <p>New user registered</p>
+                    <div class="activities">
+                        <h2>Activities</h2>
+                        <div class="text-1">
+                            <div class="flex">
+                                <img src="./images/Avatar.svg" alt="Avatar Icon">
+                                <p>Edited the details of Project X</p>
+                            </div>
+                            <time>5m ago</time>
+                        </div>
+                        <div class="text-1">
+                            <div class="flex">
+                                <img src="./images/Avatar (1).svg" alt="Avatar-1 Icon">
+                                <p>Changed the status of Project X</p>
+                            </div>
+                            <time>1:32 AM</time>
+                        </div>
+                        <div class="text-1">
+                            <div class="flex">
+                                <img src="./images/Avatar (2).svg" alt="Avatar-2 Icon">
+                                <p>Submitted a bug</p>
+                            </div>
+                            <time>Yesterday 12:39 AM</time>
+                        </div>
+                        <div class="text-1">
+                            <div class="flex">
+                                <img src="./images/Avatar (3).svg" alt="Avatar-3 Icon">
+                                <p>Modified A data in Page X</p>
+                            </div>
+                            <time>Last Thursday 3:34 AM</time>
+                        </div>
+                        <div class="text-1">
+                            <div class="flex">
+                                <img src="./images/Avatar (4).svg" alt="Avatar-4 Icon">
+                                <p>Deleted a page in Project X</p>
+                            </div>
+                            <time>Aug 11</time>
+                        </div>
                     </div>
-                    <time>1:23 AM</time>
-                </div>
-                <div class="text-1">
-                    <div class="flex">
-                        <img src="./images/BugBeetle.svg" alt="BugBeetle Icon">
-                        <p>You have a bug that needs to be fixed.</p>
+                    <div class="contacts">
+                        <h2>Contacts</h2>
+                        <div class="flex">
+                            <img src="./images/Avatar (5).svg" alt="Avatar-5 Icon">
+                            <p>Natali Craig</p>
+                        </div>
+                        <div class="flex">
+                            <img src="./images/Avatar (6).svg" alt="Avatar-6 Icon">
+                            <p>Drew Cano</p>
+                        </div>
+                        <div class="flex">
+                            <img src="./images/Avatar (7).svg" alt="Avatar-7 Icon">
+                            <p>Orlando Diggs</p>
+                        </div>
+                        <div class="flex">
+                            <img src="./images/Avatar (8).svg" alt="Avatar-8 Icon">
+                            <p>Andi Lane</p>
+                        </div>
+                        <div class="flex">
+                            <img src="./images/Avatar (3).svg" alt="Avatar-3 Icon">
+                            <p>Kate Morrison</p>
+                        </div>
+                        <div class="flex">
+                            <img src="./images/Avatar (10).svg" alt="">
+                            <p>Koray Okumus</p>
+                        </div>
                     </div>
-                    <time>0:32 AM</time>
                 </div>
-                <div class="text-1">
-                    <div class="flex">
-                        <img src="./images/Broadcast.svg" alt="Broadcast Icon">
-                        <p>Andi Lane subscribed to you</p>
-                    </div>
-                    <time>Yesterday 12:39 AM</time>
-                </div>
-            </div>
-            <div class="activities">
-                <h2>Activities</h2>
-                <div class="text-1">
-                    <div class="flex">
-                        <img src="./images/Avatar.svg" alt="Avatar Icon">
-                        <p>Edited the details of Project X</p>
-                    </div>
-                    <time>5m ago</time>
-                </div>
-                <div class="text-1">
-                    <div class="flex">
-                        <img src="./images/Avatar (1).svg" alt="Avatar-1 Icon">
-                        <p>Changed the status of Project X</p>
-                    </div>
-                    <time>1:32 AM</time>
-                </div>
-                <div class="text-1">
-                    <div class="flex">
-                        <img src="./images/Avatar (2).svg" alt="Avatar-2 Icon">
-                        <p>Submitted a bug</p>
-                    </div>
-                    <time>Yesterday 12:39 AM</time>
-                </div>
-                <div class="text-1">
-                    <div class="flex">
-                        <img src="./images/Avatar (3).svg" alt="Avatar-3 Icon">
-                        <p>Modified A data in Page X</p>
-                    </div>
-                    <time>Last Thursday 3:34 AM</time>
-                </div>
-                <div class="text-1">
-                    <div class="flex">
-                        <img src="./images/Avatar (4).svg" alt="Avatar-4 Icon">
-                        <p>Deleted a page in Project X</p>
-                    </div>
-                    <time>Aug 11</time>
-                </div>
-            </div>
-            <div class="contacts">
-                <h2>Contacts</h2>
-                <div class="flex">
-                    <img src="./images/Avatar (5).svg" alt="Avatar-5 Icon">
-                    <p>Natali Craig</p>
-                </div>
-                <div class="flex">
-                    <img src="./images/Avatar (6).svg" alt="Avatar-6 Icon">
-                    <p>Drew Cano</p>
-                </div>
-                <div class="flex">
-                    <img src="./images/Avatar (7).svg" alt="Avatar-7 Icon">
-                    <p>Orlando Diggs</p>
-                </div>
-                <div class="flex">
-                    <img src="./images/Avatar (8).svg" alt="Avatar-8 Icon">
-                    <p>Andi Lane</p>
-                </div>
-                <div class="flex">
-                    <img src="./images/Avatar (3).svg" alt="Avatar-3 Icon">
-                    <p>Kate Morrison</p>
-                </div>
-                <div class="flex">
-                    <img src="./images/Avatar (10).svg" alt="">
-                    <p>Koray Okumus</p>
-                </div>
-            </div>
-        </div>
     </main>
     <footer></footer>
 </body>

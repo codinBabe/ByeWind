@@ -3,10 +3,15 @@
   --black-40: rgba(0, 0, 0, 0.40);
   --black-20: rgba(0, 0, 0, 0.20);
   --black-5: rgba(0, 0, 0, 0.05);
+  --black-10: rgba(0, 0, 0, 0.10);
   --Primary-Blue: #E3F5FF;
   --Primary-Purple: #E5ECF6;
   --Primary-Light: #F7F9FB;
   --Secondary-Blue:#A8C5DA;
+  --Secondary-Purple:#C6C7F8;
+  --Secondary-Green:#BAEDBD;
+  --Secondary-BlueB:#B1E3FF;
+  --Secondary-PurpleA:#95A4FC;
 }
 
 *,*::before,*::after{
@@ -70,8 +75,8 @@ line-height: 20px; /* 142.857% */
 }
 .flex{
     display: flex;
-    gap: 1em;
     align-items: center;
+    gap: 1em;
 }
 .dropdown-menu p{
 color: var(--black-40);
@@ -165,6 +170,9 @@ margin-bottom: 1em;
 .justify{
     justify-content: space-between;
 }
+/* .justify-center{
+    justify-content: center;
+} */
 .no-gap{
     gap: .2em;
 }
@@ -220,21 +228,21 @@ list-style: none;
   left: 10%; 
 }
 .x-axis-labels{
-    gap: 1.2em;
-    align-items: right;
+    gap: 1em;
+    align-items: center;
 }
 .curve-image{
     position: absolute;
     bottom: 28%;
     width: 80%;
 }
-.socials{
+.socials, .traffic{
     background-color: var(--Primary-Light);
     margin-top: 1.5em;
     border-radius: 16px;
     padding: 1.5em;
 }
-.socials h2{
+.socials h2, .traffic h2{
 color: var(--black-100);
 font-size: 0.75em;
 font-weight: 600;
@@ -250,8 +258,64 @@ line-height: 18px;
     margin-top: .8em;
 }
 .socials .progress {
-  width: 50%;
-  height: 8px; /* Adjust the height as needed */
-   background: linear-gradient(90deg, var(--progress-color, #4CAF50) 70%, transparent 70%);
+  height: 8px;
+  background: linear-gradient(90deg, var(--black-10) 70%, transparent 70%);
   border-radius: 4px;
+  position: relative;
+}
+
+.socials .dark{
+    background: linear-gradient(90deg, var(--black-100) 70%, transparent 70%);
+}
+.traffic h2{
+    margin-bottom: .8em;
+}
+.progress-bar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.progress-bar {
+  width: 10px;
+  border-radius: 2px;
+  position: absolute;
+  transform: translateX(-50%);
+}
+.linux{
+    top: -51px;
+    left: 50%;
+    background-color: var(--Secondary-Green);
+    height: 45px;
+}
+.mac{
+    top: -60px;
+    left: 50%;
+    background-color: var(--Secondary-Purple);
+    height: 55px;
+}
+.ios{
+    top: -51px;
+    left: 50%;
+    background-color: var(--black-100);
+    height: 45px;
+}
+.windows{
+    top: -80px;
+    left: 50%;
+    background-color: var(--Secondary-BlueB);
+    height: 75px;
+}
+.andriod{
+    top: -40px;
+    left: 50%;
+    background-color: var(--Secondary-PurpleA);
+    height: 35px;
+}
+.others{
+    top: -60px;
+    left: 50%;
+    background-color: var(--Secondary-Green);
+    height: 55px;
 }
