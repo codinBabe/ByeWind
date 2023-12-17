@@ -267,7 +267,7 @@ line-height: 18px;
 .socials .dark{
     background: linear-gradient(90deg, var(--black-100) 70%, transparent 70%);
 }
-.traffic-by-device h2{
+.traffic-by-device h2, .traffic-by-location h2{
     margin-bottom: .8em;
 }
 .progress-bar-container {
@@ -329,18 +329,24 @@ line-height: 18px;
   display: inline-block;
   border-radius: 50%;
 }
+.location>p, .percentage p{
+    color: var(--black-100, #1C1C1C);
+    font-size: 0.75rem;
+    line-height: 18px;
+    margin-top: 1em;
+}
 .right h2{
 color: var(--black-100, #1C1C1C);
 font-size: .875rem;
 font-weight: 600;
-line-height: 20px; /* 142.857% */
+line-height: 20px;
 }
 .right p{
 color: var(--black-100, #1C1C1C);
 text-overflow: ellipsis;
 white-space: nowrap;
 font-size: 0.875rem;
-line-height: 20px; /* 142.857% */
+line-height: 20px;
 }
 .right time{
 color: var(--black-40, rgba(0, 0, 0, 0.40));
