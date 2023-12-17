@@ -236,13 +236,13 @@ list-style: none;
     bottom: 28%;
     width: 80%;
 }
-.socials, .traffic{
+.socials, .traffic-by-device, .traffic-by-location,.marketing{
     background-color: var(--Primary-Light);
     margin-top: 1.5em;
     border-radius: 16px;
     padding: 1.5em;
 }
-.socials h2, .traffic h2{
+.socials h2, .traffic-by-device h2, .traffic-by-location h2,.marketing h2{
 color: var(--black-100);
 font-size: 0.75em;
 font-weight: 600;
@@ -267,7 +267,7 @@ line-height: 18px;
 .socials .dark{
     background: linear-gradient(90deg, var(--black-100) 70%, transparent 70%);
 }
-.traffic h2{
+.traffic-by-device h2{
     margin-bottom: .8em;
 }
 .progress-bar-container {
@@ -318,4 +318,40 @@ line-height: 18px;
     left: 50%;
     background-color: var(--Secondary-Green);
     height: 55px;
+}
+
+/* PIE CHART */
+.circle {
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(white 40%, transparent 41%), conic-gradient(var(--black-100) 0% 38.6%, var(--Secondary-Green) 30.8% 70%, var(--Secondary-PurpleA) 8.1% 80%, var(--Primary-Purple) 22.5% 60%);
+  margin: 10px;
+  display: inline-block;
+  border-radius: 50%;
+}
+.right h2{
+color: var(--black-100, #1C1C1C);
+font-size: .875rem;
+font-weight: 600;
+line-height: 20px; /* 142.857% */
+}
+.right p{
+color: var(--black-100, #1C1C1C);
+text-overflow: ellipsis;
+white-space: nowrap;
+font-size: 0.875rem;
+line-height: 20px; /* 142.857% */
+}
+.right time{
+color: var(--black-40, rgba(0, 0, 0, 0.40));
+text-overflow: ellipsis;
+white-space: nowrap;
+font-size: 0.75rem;
+line-height: 18px;
+}
+.right>div{
+    margin-top: 1.5em;
+}
+.notification>div,.activities>div, .contacts>div{
+    margin-top: .8em;
 }
