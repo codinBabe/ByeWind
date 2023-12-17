@@ -28,6 +28,7 @@ img{
 }
 .container{
     width: 95%;
+    max-width: 375px;
     margin: 0 auto;
     padding: 1.5em;
 }
@@ -81,7 +82,7 @@ line-height: 20px; /* 142.857% */
 .dropdown-menu p{
 color: var(--black-40);
 font-size: 0.875rem;
-line-height: 20px; /* 142.857% */
+line-height: 20px;
 }
 .dropdown-menu ul li{
     margin: .5em;
@@ -101,7 +102,7 @@ text-decoration: none;
 .dropdown-menu h1{
 color: var(--black-40);
 font-size: 0.875rem;
-line-height: 20px; /* 142.857% */
+line-height: 20px;
 }
 .dropdown-menu ul, .dropdown-content{
     margin-bottom: 1.5em;
@@ -235,7 +236,9 @@ list-style: none;
     position: absolute;
     bottom: 28%;
     width: 80%;
+    right: 20px;
 }
+/* TRAFFIC BY WEBSITE */
 .socials, .traffic-by-device, .traffic-by-location,.marketing{
     background-color: var(--Primary-Light);
     margin-top: 1.5em;
@@ -268,7 +271,7 @@ line-height: 18px;
     background: linear-gradient(90deg, var(--black-100) 70%, transparent 70%);
 }
 .traffic-by-device h2, .traffic-by-location h2{
-    margin-bottom: .8em;
+    margin-bottom: 1em;
 }
 .progress-bar-container {
   display: flex;
@@ -334,6 +337,24 @@ line-height: 18px;
     font-size: 0.75rem;
     line-height: 18px;
     margin-top: 1em;
+    position: relative;
+}
+.location p::before{
+    content: '\2022'; /* Unicode character for a bullet point */
+    display: inline-block;
+    position: absolute;
+    left: -9px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.location p:nth-child(2)::before{
+    color: var(--Secondary-Purple);
+}
+.location p:nth-child(3)::before{
+    color: var(--Secondary-Green);
+}
+.location p:nth-child(4)::before{
+    color: var(--Secondary-PurpleA);
 }
 .right h2{
 color: var(--black-100, #1C1C1C);
