@@ -387,6 +387,9 @@ line-height: 18px;
     border-radius: 8px;
     background-color: var(--Primary-Blue);
 }
+.hidden{
+    display: none;
+}
 /* DARK MODE */
 body.dark-mode{
     background-color: var(--black-100);

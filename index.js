@@ -20,4 +20,11 @@ function toggleDarkMode() {
     });
 }
 
+function toggleMenu() {
+    const navBars = document.querySelectorAll('.navbar');
+    navBars.forEach(navBar => {
+        navBar.classList.toggle('hidden');
+    });
+}
+document.querySelector('#logo').addEventListener('click', toggleMenu);
 document.querySelector('#toggle').addEventListener('click', toggleDarkMode);
