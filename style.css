@@ -6,6 +6,7 @@
   --black-40: rgba(0, 0, 0, 0.40);
   --black-100: #1C1C1C;
   --white-5: rgba(255, 255, 255, 0.05);
+  --white-10: rgba(255, 255, 255, 0.10);
   --white-20: rgba(255, 255, 255, 0.20);
   --white-40: rgba(255, 255, 255, 0.40);
   --Primary-Blue: #E3F5FF;
@@ -318,10 +319,10 @@ line-height: 18px;
     height: 75px;
 }
 .andriod{
-    top: -40px;
+    top: -34px;
     left: 50%;
     background-color: var(--Secondary-PurpleA);
-    height: 35px;
+    height: 28px;
 }
 .others{
     top: -60px;
@@ -391,16 +392,76 @@ body.dark-mode{
     background-color: var(--black-100);
     color: #fff;
 }
-.dark-mode .left a{
+.dark-mode .active,
+.dark-mode .search-container input::placeholder,
+.dark-mode .dropdown-menu:nth-child(1) p,
+.dark-mode .left h1,
+.dark-mode .dot p::before,
+.dark-mode .y-axis-labels p, .dark-mode .x-axis-labels p,
+.dark-mode .chart-headings p:not(:first-child),
+.dark-mode .right time
+{
+    color: var(--white-40);
+}
+.dark-mode .navbar a, 
+.dark-mode .left a,
+.dark-mode .center h2{
     color: #fff;
 }
-.dark-mode .dropdown-content img, .dark-mode .nav img{
+.dark-mode .search-container input,
+.dark-mode .pages-sub-dropdown a:nth-child(2){
+    background-color: var(--white-10);
+}
+.dark-mode .dropdown-menu div:nth-child(1) p:last-child{
+    color: var(--white-20);
+}
+.dark-mode .dropdown-content img, 
+.dark-mode .nav img,
+.dark-mode .dropdown-content a::before,
+.dark-mode .center h2::after,
+.dark-mode .curve-image img,
+.dark-mode .left img{
     filter: invert(1);
 }
 .dark-mode .chart,
 .dark-mode .socials, 
 .dark-mode .traffic-by-device, 
 .dark-mode .traffic-by-location,
-.dark-mode .marketing{
+.dark-mode .marketing,
+.dark-mode .y-axis-labels p::after{
     background-color: var(--white-5);
+}
+.dark-mode .sub-grid, 
+.dark-mode .sub-grid h2{
+    color: var(--black-100);
+}
+.dark-mode .linux{
+    background-color: var(--Secondary-PurpleA);
+}
+.dark-mode .mac{
+    background-color: var(--Secondary-Green);
+}
+.dark-mode .ios{
+    background-color: var(--Secondary-Purple);
+}
+.dark-mode .progress{
+    background: linear-gradient(90deg, var(--white-10) 70%, transparent 70%);
+}
+.dark-mode .dark{
+    background: linear-gradient(90deg, var(--Secondary-PurpleA) 70%, transparent 70%);
+}
+.dark-mode .circle{
+    background: radial-gradient(black 40%, transparent 41%), conic-gradient(var(--Secondary-Green) 0% 38.6%, var(--Secondary-Purple) 30.8% 70%, var(--Secondary-BlueB) 8.1% 80%, var(--Secondary-PurpleA) 22.5% 60%);
+}
+.dark-mode .location p:nth-child(1)::before{
+    color: var(--Secondary-Green);
+}
+.dark-mode .location p:nth-child(2)::before{
+    color: var(--Secondary-PurpleA);
+}
+.dark-mode .location p:nth-child(3)::before{
+    color: var(--Secondary-Purple);
+}
+.dark-mode .location p:nth-child(4)::before{
+    color: var(--Secondary-BlueB);
 }

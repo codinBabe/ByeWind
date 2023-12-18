@@ -2,10 +2,6 @@
 function toggleDarkMode() {
     document.body.classList.toggle('dark-mode');
 
-    const containers = document.querySelectorAll('.dark-mode-container');
-    containers.forEach(container => {
-        container.classList.toggle('dark-mode');
-    });
     const navImgs = document.querySelectorAll('.nav img');
     navImgs.forEach(navImg => {
         navImg.classList.toggle('.dark-mode');
@@ -17,6 +13,10 @@ function toggleDarkMode() {
     const anchorImgs = document.querySelectorAll('dropdown-content img');
     anchorImgs.forEach(anchorImg => {
         anchorImg.classList.toggle('dark-mode');
+    });
+    const containers = document.querySelectorAll('.dark-mode-container');
+    containers.forEach(container => {
+        container.classList.toggle('dark-mode');
     });
 }
 
