@@ -34,7 +34,7 @@
                     <input type="search" placeholder="Search">
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link"><img src="./images/Sun.svg" alt="Sun Icon"></a>
+                    <a id="toggle" href="#" class="nav-link"><img src="./images/Sun.svg" alt="Sun Icon"></a>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link"><img src="./images/ClockCounterClockwise.svg"
@@ -50,16 +50,17 @@
         </div>
     </header>
     <main class="container">
+        <!-- LEFT SECTION -->
         <section class="left grid-col">
             <div class="dropdown-menu">
                 <div class="flex">
                     <p>Favorites</p>
                     <p>Recently</p>
                 </div>
-                <ul>
-                    <li>Overview</li>
-                    <li>Projects</li>
-                </ul>
+                <div class="dot">
+                    <p>Overview</p>
+                    <p>Projects</p>
+                </div>
                 <h1>Dashboards</h1>
                 <div class="dropdown-content">
                     <a href="#"><img src="./images/ChartPieSlice.svg" alt="ChartPieSlice Icon"> Default</a>
@@ -86,8 +87,12 @@
             </div>
             <img src="./images/Logo.svg" alt="Snow Logo">
         </section>
+        <!-- END OF LEFT SECTION -->
+
+        <!-- CENTER SECTION -->
         <section class="center grid-col">
             <h2>Today</h2>
+            <!-- 4 GRID -->
             <div class="sub-grid sub-grid-1">
                 <h4>Views</h4>
                 <div class="flex justify">
@@ -128,8 +133,10 @@
                     </div>
                 </div>
             </div>
+            <!-- END OF 4 GRID -->
 
-            <div class="chart">
+            <!-- CHART -->
+            <div class="chart dark-mode-container">
                 <div class="flex">
                     <div class="flex chart-headings">
                         <p>Total Users</p>
@@ -172,7 +179,10 @@
                     </div>
                 </div>
             </div>
-            <div class="socials">
+            <!-- END OF CHART -->
+
+            <!-- TRAFFIC-BY-WEBSITE -->
+            <div class="socials dark-mode-container">
                 <h2>Traffic by Website</h2>
                 <div class="flex">
                     <p>Google</p>
@@ -203,8 +213,10 @@
                     <div class="progress" style="width: 50%;"></div>
                 </div>
             </div>
-            <!-- <div class="traffic"> -->
-            <div class="traffic-by-device">
+            <!-- END OF TRAFFIC-BY-WEBSITE -->
+
+            <!-- TRAFFIC-BY-DEVICE -->
+            <div class="traffic-by-device dark-mode-container">
                 <h2>Traffic by Device</h2>
                 <div class="axis-labels">
                     <div class="y-axis-labels">
@@ -243,7 +255,10 @@
                     </div>
                 </div>
             </div>
-            <div class="traffic-by-location">
+            <!-- END OF TRAFFIC-BY-DEVICE -->
+
+            <!-- TRAFFIC-BY-LOCATION -->
+            <div class="traffic-by-location dark-mode-container">
                 <h2>Traffic by Location</h2>
                 <div class="flex justify no-gap">
                     <div class="circle"></div>
@@ -261,7 +276,10 @@
                     </div>
                 </div>
             </div>
-            <div class="marketing">
+            <!-- END OF TRAFFIC-BY-LOCATION -->
+
+            <!-- MARKETING -->
+            <div class="marketing dark-mode-container">
                 <h2>Marketing & SEO</h2>
                 <div class="axis-labels">
                     <div class="y-axis-labels">
@@ -269,106 +287,113 @@
                     </div>
                 </div>
             </div>
-            <section class="right grid-col">
-                <div class="notification">
-                    <h2>Notification</h2>
-                    <div class="text-1">
-                        <div class="flex">
-                            <img src="./images/BugBeetle.svg" alt="BugBeetle Icon">
-                            <p>You have a bug that needs to be fixed.</p>
-                        </div>
-                        <time>5m ago</time>
+            <!-- END OF MARKETING -->
+        </section>
+        <!-- END OF CENTER SECTION -->
+
+        <!-- RIGHT SECTION -->
+        <section class="right grid-col">
+            <div class="notification">
+                <h2>Notification</h2>
+                <div class="text-1">
+                    <div class="flex">
+                        <img src="./images/BugBeetle.svg" alt="BugBeetle Icon">
+                        <p>You have a bug that needs to be fixed.</p>
                     </div>
-                    <div class="text-1">
-                        <div class="flex">
-                            <img src="./images/User.svg" alt="User Icon">
-                            <p>New user registered</p>
-                        </div>
-                        <time>1:23 AM</time>
-                    </div>
-                    <div class="text-1">
-                        <div class="flex">
-                            <img src="./images/BugBeetle.svg" alt="BugBeetle Icon">
-                            <p>You have a bug that needs to be fixed.</p>
-                        </div>
-                        <time>0:32 AM</time>
-                    </div>
-                    <div class="text-1">
-                        <div class="flex">
-                            <img src="./images/Broadcast.svg" alt="Broadcast Icon">
-                            <p>Andi Lane subscribed to you</p>
-                        </div>
-                        <time>Yesterday 12:39 AM</time>
-                    </div>
+                    <time>5m ago</time>
                 </div>
-                <div class="activities">
-                    <h2>Activities</h2>
-                    <div class="text-1">
-                        <div class="flex">
-                            <img src="./images/Avatar.svg" alt="Avatar Icon">
-                            <p>Edited the details of Project X</p>
-                        </div>
-                        <time>5m ago</time>
+                <div class="text-1">
+                    <div class="flex">
+                        <img src="./images/User.svg" alt="User Icon">
+                        <p>New user registered</p>
                     </div>
-                    <div class="text-1">
-                        <div class="flex">
-                            <img src="./images/Avatar (1).svg" alt="Avatar-1 Icon">
-                            <p>Changed the status of Project X</p>
-                        </div>
-                        <time>1:32 AM</time>
-                    </div>
-                    <div class="text-1">
-                        <div class="flex">
-                            <img src="./images/Avatar (2).svg" alt="Avatar-2 Icon">
-                            <p>Submitted a bug</p>
-                        </div>
-                        <time>Yesterday 12:39 AM</time>
-                    </div>
-                    <div class="text-1">
-                        <div class="flex">
-                            <img src="./images/Avatar (3).svg" alt="Avatar-3 Icon">
-                            <p>Modified A data in Page X</p>
-                        </div>
-                        <time>Last Thursday 3:34 AM</time>
-                    </div>
-                    <div class="text-1">
-                        <div class="flex">
-                            <img src="./images/Avatar (4).svg" alt="Avatar-4 Icon">
-                            <p>Deleted a page in Project X</p>
-                        </div>
-                        <time>Aug 11</time>
-                    </div>
+                    <time>1:23 AM</time>
                 </div>
-                <div class="contacts">
-                    <h2>Contacts</h2>
+                <div class="text-1">
                     <div class="flex">
-                        <img src="./images/Avatar (5).svg" alt="Avatar-5 Icon">
-                        <p>Natali Craig</p>
+                        <img src="./images/BugBeetle.svg" alt="BugBeetle Icon">
+                        <p>You have a bug that needs to be fixed.</p>
                     </div>
+                    <time>0:32 AM</time>
+                </div>
+                <div class="text-1">
                     <div class="flex">
-                        <img src="./images/Avatar (6).svg" alt="Avatar-6 Icon">
-                        <p>Drew Cano</p>
+                        <img src="./images/Broadcast.svg" alt="Broadcast Icon">
+                        <p>Andi Lane subscribed to you</p>
                     </div>
+                    <time>Yesterday 12:39 AM</time>
+                </div>
+            </div>
+            <div class="activities">
+                <h2>Activities</h2>
+                <div class="text-1">
                     <div class="flex">
-                        <img src="./images/Avatar (7).svg" alt="Avatar-7 Icon">
-                        <p>Orlando Diggs</p>
+                        <img src="./images/Avatar.svg" alt="Avatar Icon">
+                        <p>Edited the details of Project X</p>
                     </div>
+                    <time>5m ago</time>
+                </div>
+                <div class="text-1">
                     <div class="flex">
-                        <img src="./images/Avatar (8).svg" alt="Avatar-8 Icon">
-                        <p>Andi Lane</p>
+                        <img src="./images/Avatar (1).svg" alt="Avatar-1 Icon">
+                        <p>Changed the status of Project X</p>
                     </div>
+                    <time>1:32 AM</time>
+                </div>
+                <div class="text-1">
+                    <div class="flex">
+                        <img src="./images/Avatar (2).svg" alt="Avatar-2 Icon">
+                        <p>Submitted a bug</p>
+                    </div>
+                    <time>Yesterday 12:39 AM</time>
+                </div>
+                <div class="text-1">
                     <div class="flex">
                         <img src="./images/Avatar (3).svg" alt="Avatar-3 Icon">
-                        <p>Kate Morrison</p>
+                        <p>Modified A data in Page X</p>
                     </div>
-                    <div class="flex">
-                        <img src="./images/Avatar (10).svg" alt="">
-                        <p>Koray Okumus</p>
-                    </div>
+                    <time>Last Thursday 3:34 AM</time>
                 </div>
-            </section>
+                <div class="text-1">
+                    <div class="flex">
+                        <img src="./images/Avatar (4).svg" alt="Avatar-4 Icon">
+                        <p>Deleted a page in Project X</p>
+                    </div>
+                    <time>Aug 11</time>
+                </div>
+            </div>
+            <div class="contacts">
+                <h2>Contacts</h2>
+                <div class="flex">
+                    <img src="./images/Avatar (5).svg" alt="Avatar-5 Icon">
+                    <p>Natali Craig</p>
+                </div>
+                <div class="flex">
+                    <img src="./images/Avatar (6).svg" alt="Avatar-6 Icon">
+                    <p>Drew Cano</p>
+                </div>
+                <div class="flex">
+                    <img src="./images/Avatar (7).svg" alt="Avatar-7 Icon">
+                    <p>Orlando Diggs</p>
+                </div>
+                <div class="flex">
+                    <img src="./images/Avatar (8).svg" alt="Avatar-8 Icon">
+                    <p>Andi Lane</p>
+                </div>
+                <div class="flex">
+                    <img src="./images/Avatar (3).svg" alt="Avatar-3 Icon">
+                    <p>Kate Morrison</p>
+                </div>
+                <div class="flex">
+                    <img src="./images/Avatar (10).svg" alt="">
+                    <p>Koray Okumus</p>
+                </div>
+            </div>
+        </section>
+        <!-- END OF RIGHT SECTION -->
     </main>
     <footer></footer>
+    <script src="./index.js"></script>
 </body>
 
 </html>

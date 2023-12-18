@@ -1,9 +1,13 @@
+/* GLOBAL STYLING */
 :root {
-  --black-100: #1C1C1C;
-  --black-40: rgba(0, 0, 0, 0.40);
-  --black-20: rgba(0, 0, 0, 0.20);
   --black-5: rgba(0, 0, 0, 0.05);
   --black-10: rgba(0, 0, 0, 0.10);
+  --black-20: rgba(0, 0, 0, 0.20);
+  --black-40: rgba(0, 0, 0, 0.40);
+  --black-100: #1C1C1C;
+  --white-5: rgba(255, 255, 255, 0.05);
+  --white-20: rgba(255, 255, 255, 0.20);
+  --white-40: rgba(255, 255, 255, 0.40);
   --Primary-Blue: #E3F5FF;
   --Primary-Purple: #E5ECF6;
   --Primary-Light: #F7F9FB;
@@ -22,6 +26,11 @@
 }
 body{
     font-family: 'Inter', sans-serif;
+    background-color: #fff;
+    color: var(--black-100);
+}
+a{
+    color: var(--black-100);
 }
 img{
     max-width: 100%;
@@ -32,6 +41,7 @@ img{
     margin: 0 auto;
     padding: 1.5em;
 }
+/* HEADER */
 .nav{
     text-align: center;
 }
@@ -44,7 +54,6 @@ img{
 .navbar li a{
     font-size: 0.875rem;
     text-decoration: none;
-    color:var(--black-100);
 }
 .navbar input{
     width: 60%;
@@ -59,7 +68,7 @@ img{
 color: var(--black-20);
 font-size: 0.875rem;
 font-weight: 400;
-line-height: 20px; /* 142.857% */
+line-height: 20px;
 }
 .search-container {
       position: relative;
@@ -67,7 +76,7 @@ line-height: 20px; /* 142.857% */
 .search-icon {
       position: absolute;
       top: 50%;
-      left: 60px;
+      left: 65px;
       transform: translateY(-50%);
       cursor: pointer;
     }
@@ -79,38 +88,36 @@ line-height: 20px; /* 142.857% */
     align-items: center;
     gap: 1em;
 }
-.dropdown-menu p{
+/* LEFT SECTION STYLING */
+.dropdown-menu div:nth-child(1) p{
 color: var(--black-40);
-font-size: 0.875rem;
-line-height: 20px;
 }
-.dropdown-menu ul li{
+.dot p{
     margin: .5em;
+    position: relative;
 }
-.dropdown-menu ul li::marker{
+.dropdown-menu .dot p::before, .dropdown-menu div:nth-child(1) p:last-child{
     color: var(--black-20);
 }
-.dropdown-menu p:last-child{
-    color: var(--black-20);
-}
-.dropdown-menu a, .dropdown-menu ul li{
-color: var(--black-100);
-font-size: 0.875em;
+.dropdown-menu a, .dropdown-menu p{
+font-size: 0.875rem;
 line-height: 20px;
 text-decoration: none;
 }
 .dropdown-menu h1{
 color: var(--black-40);
+font-weight: 400;
 font-size: 0.875rem;
 line-height: 20px;
 }
-.dropdown-menu ul, .dropdown-content{
+.dropdown-menu .dot, .dropdown-content{
     margin-bottom: 1.5em;
 }
 .dropdown-content a{
     display: flex;
     align-items: center;
     gap: .5em;
+    margin-bottom: .3em;
 }
 .dropdown-content a::before{
     content: url('./images/ArrowLineRight2.svg');
@@ -134,6 +141,7 @@ display: flex;
 justify-content: center;
 padding: .4em 0;
 }
+/* CENTER SECTION STYLING */
 .center > h2::after{
     content: url('./images/ArrowLineDown2.svg');
 }
@@ -157,7 +165,6 @@ padding: 1.5em;
     background-color: var(--Primary-Purple);
 }
 .sub-grid h4 , .sub-grid h2{
-color: var(--black-100);
 font-weight: 600;
 line-height: 20px;
 }
@@ -171,25 +178,17 @@ margin-bottom: 1em;
 .justify{
     justify-content: space-between;
 }
-/* .justify-center{
-    justify-content: center;
-} */
 .no-gap{
     gap: .2em;
 }
+/* CHART STYLING */
 .chart{
-border-radius: 16px;
-background: var(--Primary-Light);
-padding: 1.5em;
-margin-top: 1.5em;
-
 position: relative;
 }
 .chart-headings p:first-child{
     font-weight: 600;
 }
 .chart-headings{
-color: var(--black-100);
 font-size: 0.55rem;
 font-weight: 400;
 line-height: 20px;
@@ -239,22 +238,28 @@ list-style: none;
     right: 20px;
 }
 /* TRAFFIC BY WEBSITE */
-.socials, .traffic-by-device, .traffic-by-location,.marketing{
+.chart,
+.socials, 
+.traffic-by-device, 
+.traffic-by-location,
+.marketing{
     background-color: var(--Primary-Light);
     margin-top: 1.5em;
     border-radius: 16px;
     padding: 1.5em;
 }
-.socials h2, .traffic-by-device h2, .traffic-by-location h2,.marketing h2{
-color: var(--black-100);
-font-size: 0.75em;
+
+.socials h2, 
+.traffic-by-device h2, 
+.traffic-by-location h2,
+.marketing h2,
+.right h2{
+font-size: 0.875rem;
 font-weight: 600;
 line-height: 20px;
 }
 .socials p{
-color: var(--black-100);
-font-size: 12px;
-font-weight: 400;
+font-size: 0.75rem;
 line-height: 18px;
 }
 .socials>div{
@@ -270,7 +275,9 @@ line-height: 18px;
 .socials .dark{
     background: linear-gradient(90deg, var(--black-100) 70%, transparent 70%);
 }
-.traffic-by-device h2, .traffic-by-location h2{
+.traffic-by-device h2, 
+.traffic-by-location h2
+.marketing h2{
     margin-bottom: 1em;
 }
 .progress-bar-container {
@@ -323,7 +330,7 @@ line-height: 18px;
     height: 55px;
 }
 
-/* PIE CHART */
+/* DONUTS PIE CHART */
 .circle {
   width: 100px;
   height: 100px;
@@ -333,18 +340,17 @@ line-height: 18px;
   border-radius: 50%;
 }
 .location>p, .percentage p{
-    color: var(--black-100, #1C1C1C);
     font-size: 0.75rem;
     line-height: 18px;
     margin-top: 1em;
     position: relative;
 }
-.location p::before{
-    content: '\2022'; /* Unicode character for a bullet point */
+.location p::before, .dot p::before{
+    content: '\2022';
     display: inline-block;
     position: absolute;
-    left: -9px;
-    top: 50%;
+    left: -10px;
+    top: 40%;
     transform: translateY(-50%);
 }
 .location p:nth-child(2)::before{
@@ -356,21 +362,15 @@ line-height: 18px;
 .location p:nth-child(4)::before{
     color: var(--Secondary-PurpleA);
 }
-.right h2{
-color: var(--black-100, #1C1C1C);
-font-size: .875rem;
-font-weight: 600;
-line-height: 20px;
-}
+/* RIGHT SECTION STYLING */
 .right p{
-color: var(--black-100, #1C1C1C);
 text-overflow: ellipsis;
 white-space: nowrap;
 font-size: 0.875rem;
 line-height: 20px;
 }
 .right time{
-color: var(--black-40, rgba(0, 0, 0, 0.40));
+color: var(--black-40);
 text-overflow: ellipsis;
 white-space: nowrap;
 font-size: 0.75rem;
@@ -381,4 +381,26 @@ line-height: 18px;
 }
 .notification>div,.activities>div, .contacts>div{
     margin-top: .8em;
+}
+.notification img{
+    border-radius: 8px;
+    background-color: var(--Primary-Blue);
+}
+/* DARK MODE */
+body.dark-mode{
+    background-color: var(--black-100);
+    color: #fff;
+}
+.dark-mode .left a{
+    color: #fff;
+}
+.dark-mode .dropdown-content img, .dark-mode .nav img{
+    filter: invert(1);
+}
+.dark-mode .chart,
+.dark-mode .socials, 
+.dark-mode .traffic-by-device, 
+.dark-mode .traffic-by-location,
+.dark-mode .marketing{
+    background-color: var(--white-5);
 }
