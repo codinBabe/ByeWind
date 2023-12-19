@@ -493,7 +493,7 @@ body.dark-mode{
     background: linear-gradient(90deg, var(--Secondary-PurpleA) 70%, transparent 70%);
 }
 .dark-mode .circle{
-    background: radial-gradient(black 48%, transparent 41%), conic-gradient(
+    background: radial-gradient(#282828 48%, transparent 41%), conic-gradient(
         var(--Secondary-PurpleA) 0% 15.6%, 
         transparent 15.6% 17.6%, 
         var(--Secondary-Purple) 17.6% 47.6%,
@@ -503,6 +503,9 @@ body.dark-mode{
         var(--Secondary-BlueB) 86.7% 94%,
         transparent 94% 96%,
         var(--Secondary-PurpleA) 96% 100% );
+        clip-path: 
+    polygon(0 0, 100% 0, 100% 48%, 100% 52%, 0 52%, 0 48%),
+    polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 .dark-mode .location p:nth-child(1)::before{
     color: var(--Secondary-Green);

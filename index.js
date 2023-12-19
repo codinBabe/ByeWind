@@ -9,5 +9,13 @@ function toggleMenu() {
         navBar.classList.toggle('hidden');
     });
 }
+
+// Function to toggle user profile sub-drop-down
+function toggleUserProfile() {
+    const userProfile = document.querySelector('.pages-sub-dropdown');
+    userProfile.classList.toggle('hidden');
+}
+
 document.querySelector('#logo').addEventListener('click', toggleMenu);
+document.querySelector('#collape').addEventListener('click', toggleUserProfile);
 document.querySelector('#toggle').addEventListener('click', toggleDarkMode);
