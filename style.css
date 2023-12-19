@@ -277,7 +277,7 @@ line-height: 18px;
     background: linear-gradient(90deg, var(--black-100) 70%, transparent 70%);
 }
 .traffic-by-device h2, 
-.traffic-by-location h2
+.traffic-by-location h2,
 .marketing h2{
     margin-bottom: 1em;
 }
@@ -335,7 +335,19 @@ line-height: 18px;
 .circle {
   width: 100px;
   height: 100px;
-  background: radial-gradient(white 40%, transparent 41%), conic-gradient(var(--black-100) 0% 38.6%, var(--Secondary-Green) 30.8% 70%, var(--Secondary-PurpleA) 8.1% 80%, var(--Primary-Purple) 22.5% 60%);
+  background: 
+    radial-gradient(white 48%, transparent 41%), 
+    conic-gradient(
+      var(--black-100) 0% 30%,      /* First color */
+      transparent 30% 32%,         /* Transparent slice for spacing */
+      var(--Secondary-Green) 32% 60%, /* Second color */
+      transparent 60% 62%,      /* Transparent slice for spacing */
+      var(--Secondary-PurpleA) 62% 70.8%, /* Third color */
+      transparent 70.8% 72%,      /* Transparent slice for spacing */
+      var(--Primary-Purple) 72% 90%, /* Fourth color */
+      transparent 90% 92%,         /* Transparent slice for spacing */
+      var(--black-100) 92% 100%    /* Fifth color (black) */
+    );
   margin: 10px;
   display: inline-block;
   border-radius: 50%;
@@ -454,7 +466,7 @@ body.dark-mode{
     background: linear-gradient(90deg, var(--Secondary-PurpleA) 70%, transparent 70%);
 }
 .dark-mode .circle{
-    background: radial-gradient(black 40%, transparent 41%), conic-gradient(var(--Secondary-Green) 0% 38.6%, var(--Secondary-Purple) 30.8% 70%, var(--Secondary-BlueB) 8.1% 80%, var(--Secondary-PurpleA) 22.5% 60%);
+    background: radial-gradient(black 48%, transparent 41%), conic-gradient(var(--Secondary-Green) 0% 38.6%, var(--Secondary-Purple) 30.8% 70%, var(--Secondary-BlueB) 8.1% 80%, var(--Secondary-PurpleA) 22.5% 60%);
 }
 .dark-mode .location p:nth-child(1)::before{
     color: var(--Secondary-Green);
