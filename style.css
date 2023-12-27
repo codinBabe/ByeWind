@@ -11,14 +11,14 @@
   --white-20: rgba(255, 255, 255, 0.20);
   --white-40: rgba(255, 255, 255, 0.40);
   --white-100: #fff;
-  --Primary-Blue: #E3F5FF;
-  --Primary-Purple: #E5ECF6;
-  --Primary-Light: #F7F9FB;
-  --Secondary-Blue:#A8C5DA;
-  --Secondary-Purple:#C6C7F8;
-  --Secondary-Green:#BAEDBD;
-  --Secondary-BlueB:#B1E3FF;
-  --Secondary-PurpleA:#95A4FC;
+  --primary-blue: #E3F5FF;
+  --primary-purple: #E5ECF6;
+  --primary-light: #F7F9FB;
+  --secondary-blue:#A8C5DA;
+  --secondary-purple:#C6C7F8;
+  --secondary-green:#BAEDBD;
+  --secondary-blue2:#B1E3FF;
+  --secondary-purple2:#95A4FC;
 }
 
 *,*::before,*::after{
@@ -162,10 +162,10 @@ margin-top: 1em;
 padding: 1.5em;
 }
 .sub-grid-1{
-    background-color: var(--Primary-Blue);
+    background-color: var(--primary-blue);
 }
 .sub-grid-2{
-    background-color: var(--Primary-Purple);
+    background-color: var(--primary-purple);
 }
 .sub-grid h4 , .sub-grid h2{
 font-weight: 600;
@@ -211,15 +211,15 @@ margin-bottom: .5em;
     transform: translateY(-50%);
 }
 .dot2 p:nth-child(2)::before{
-    color: var(--Secondary-Blue);
+    color: var(--secondary-blue);
 }
 .chart-note{
     color:var(--white-100);
     text-align: center;
     font-size: .5rem;
     background-color: var(--black-100);
-    border-radius: 8px;
-    width: 20%;
+    padding: 4px 8px;
+    border-radius: 5px;
     position: absolute;
     top:55%;
     right:75px;
@@ -265,7 +265,7 @@ margin-bottom: .5em;
 .traffic-by-device, 
 .traffic-by-location,
 .marketing{
-    background-color: var(--Primary-Light);
+    background-color: var(--primary-light);
     margin-top: 1.5em;
     border-radius: 16px;
     padding: 1.5em;
@@ -318,13 +318,13 @@ line-height: 18px;
 .linux{
     top: -51px;
     left: 50%;
-    background-color: var(--Secondary-Green);
+    background-color: var(--secondary-green);
     height: 45px;
 }
 .mac{
     top: -60px;
     left: 50%;
-    background-color: var(--Secondary-Purple);
+    background-color: var(--secondary-purple);
     height: 55px;
 }
 .ios{
@@ -336,19 +336,19 @@ line-height: 18px;
 .windows{
     top: -80px;
     left: 50%;
-    background-color: var(--Secondary-BlueB);
+    background-color: var(--secondary-blue2);
     height: 75px;
 }
 .andriod{
     top: -34px;
     left: 50%;
-    background-color: var(--Secondary-PurpleA);
+    background-color: var(--secondary-purple2);
     height: 28px;
 }
 .others{
     top: -60px;
     left: 50%;
-    background-color: var(--Secondary-Green);
+    background-color: var(--secondary-green);
     height: 55px;
 }
 
@@ -361,20 +361,17 @@ line-height: 18px;
     conic-gradient(
       var(--black-100) 0% 28.6%,
       transparent 28.6% 30.6%,         
-      var(--Secondary-Green) 30.6% 60.6%, 
+      var(--secondary-green) 30.6% 60.6%, 
       transparent 60.6% 62.6%,      
-      var(--Secondary-PurpleA) 62.6% 70.7%,
+      var(--secondary-purple2) 62.6% 70.7%,
       transparent 70.7% 72.7%,      
-      var(--Primary-Purple) 72.7% 90%,
+      var(--primary-purple) 72.7% 90%,
       transparent 90% 92%,         
       var(--black-100) 92% 100%
     );
   margin: 10px;
   display: inline-block;
   border-radius: 50%;
-  clip-path: 
-    polygon(0 0, 100% 0, 100% 48%, 100% 52%, 0 52%, 0 48%),
-    polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 .location>p, .percentage p{
     font-size: 0.75rem;
@@ -391,13 +388,13 @@ line-height: 18px;
     transform: translateY(-50%);
 }
 .location p:nth-child(2)::before{
-    color: var(--Secondary-Purple);
+    color: var(--secondary-purple);
 }
 .location p:nth-child(3)::before{
-    color: var(--Secondary-Green);
+    color: var(--secondary-green);
 }
 .location p:nth-child(4)::before{
-    color: var(--Secondary-PurpleA);
+    color: var(--secondary-purple2);
 }
 /* RIGHT SECTION STYLING */
 .right p{
@@ -421,7 +418,7 @@ line-height: 18px;
 }
 .notification img{
     border-radius: 8px;
-    background-color: var(--Primary-Blue);
+    background-color: var(--primary-blue);
 }
 .hidden{
     display: none;
@@ -478,46 +475,46 @@ body.dark-mode{
     color: var(--black-100);
 }
 .dark-mode .linux{
-    background-color: var(--Secondary-PurpleA);
+    background-color: var(--secondary-purple2);
 }
 .dark-mode .mac{
-    background-color: var(--Secondary-Green);
+    background-color: var(--secondary-green);
 }
 .dark-mode .ios{
-    background-color: var(--Secondary-Purple);
+    background-color: var(--secondary-purple);
 }
 .dark-mode .progress{
     background: linear-gradient(90deg, var(--white-10) 70%, transparent 70%);
 }
 .dark-mode .dark{
-    background: linear-gradient(90deg, var(--Secondary-PurpleA) 70%, transparent 70%);
+    background: linear-gradient(90deg, var(--secondary-purple2) 70%, transparent 70%);
 }
 .dark-mode .circle{
     background: radial-gradient(#282828 48%, transparent 41%), conic-gradient(
-        var(--Secondary-PurpleA) 0% 15.6%, 
+        var(--secondary-purple2) 0% 15.6%, 
         transparent 15.6% 17.6%, 
-        var(--Secondary-Purple) 17.6% 47.6%,
+        var(--secondary-purple) 17.6% 47.6%,
         transparent 47.6% 49.6%,
-        var(--Secondary-Green) 49.6% 84.7%,
+        var(--secondary-green) 49.6% 84.7%,
         transparent 84.7% 86.7%,
-        var(--Secondary-BlueB) 86.7% 94%,
+        var(--secondary-blue2) 86.7% 94%,
         transparent 94% 96%,
-        var(--Secondary-PurpleA) 96% 100% );
+        var(--secondary-purple2) 96% 100% );
         clip-path: 
     polygon(0 0, 100% 0, 100% 48%, 100% 52%, 0 52%, 0 48%),
     polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 .dark-mode .location p:nth-child(1)::before{
-    color: var(--Secondary-Green);
+    color: var(--secondary-green);
 }
 .dark-mode .location p:nth-child(2)::before{
-    color: var(--Secondary-PurpleA);
+    color: var(--secondary-purple2);
 }
 .dark-mode .location p:nth-child(3)::before,
 .dark-mode .dot2 p:nth-child(1)::before{
 
-    color: var(--Secondary-Purple);
+    color: var(--secondary-purple);
 }
 .dark-mode .location p:nth-child(4)::before{
-    color: var(--Secondary-BlueB);
+    color: var(--secondary-blue2);
 }
