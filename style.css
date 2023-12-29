@@ -287,15 +287,28 @@ line-height: 18px;
 .socials>div{
     margin-top: .8em;
 }
-.socials .progress {
+.socials .bar {
   height: 8px;
-  background: linear-gradient(90deg, var(--black-10) 70%, transparent 70%);
-  border-radius: 4px;
+  border-radius: 0 16px 16px 0;
+  background-color: var(--black-10);
   position: relative;
 }
-
+.socials .bar::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -3px;
+  left: 0;
+  bottom: 0;
+  width: 1px;
+  height: 14px;
+  background-color: var(--black-10);
+}
 .socials .dark{
-    background: linear-gradient(90deg, var(--black-100) 70%, transparent 70%);
+    background-color: var(--black-100);
+}
+.socials .dark::before{
+    background-color: var(--black-100);
 }
 .traffic-by-device h2, 
 .traffic-by-location h2,
@@ -423,7 +436,8 @@ body.dark-mode{
     color: #fff;
 }
 .dark-mode .search-container input,
-.dark-mode .pages-sub-dropdown a:nth-child(2){
+.dark-mode .pages-sub-dropdown a:nth-child(2),
+.dark-mode .bar::before{
     background-color: var(--white-10);
 }
 .dark-mode .dropdown-menu div:nth-child(1) p:last-child{
@@ -452,7 +466,7 @@ body.dark-mode{
 .dark-mode .sub-grid h2{
     color: var(--black-100);
 }
-.dark-mode .linux{
+.dark-mode .linux, .dark-mode .dark, .dark-mode .dark::before{
     background-color: var(--secondary-purple2);
 }
 .dark-mode .mac{
@@ -460,12 +474,6 @@ body.dark-mode{
 }
 .dark-mode .ios{
     background-color: var(--secondary-purple);
-}
-.dark-mode .progress{
-    background: linear-gradient(90deg, var(--white-10) 70%, transparent 70%);
-}
-.dark-mode .dark{
-    background: linear-gradient(90deg, var(--secondary-purple2) 70%, transparent 70%);
 }
 .dark-mode .location p:nth-child(1)::before{
     color: var(--secondary-green);

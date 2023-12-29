@@ -49,7 +49,7 @@ const TAU = PI * 2;
 function drawSlice(x, y, radius, startAngle, endAngle, color, lineWidth) {
     ctx.beginPath();
     ctx.strokeStyle = color;
-    ctx.lineWidth = lineWidth
+    ctx.lineWidth = lineWidth;
     ctx.arc(x, y, 40, startAngle, endAngle);
     ctx.stroke();
 }
