@@ -19,6 +19,7 @@
   --secondary-green:#BAEDBD;
   --secondary-blue2:#B1E3FF;
   --secondary-purple2:#95A4FC;
+  --shadow:0px 2px 2px rgba(0,0,0,0.10);
 }
 
 *,*::before,*::after{
@@ -185,7 +186,7 @@ margin-bottom: 1em;
     gap: .2em;
 }
 /* CHART STYLING */
-.chart{
+.chart, .curve-image{
 position: relative;
 }
 .chart-headings{
@@ -213,17 +214,6 @@ margin-bottom: .5em;
 .dot2 p:nth-child(2)::before{
     color: var(--secondary-blue);
 }
-.chart-note{
-    color:var(--white-100);
-    text-align: center;
-    font-size: .5rem;
-    background-color: var(--black-100);
-    padding: 4px 8px;
-    border-radius: 5px;
-    position: absolute;
-    top:55%;
-    right:75px;
-}
 .y-axis-labels,.x-axis-labels{
     display: flex;
 }
@@ -250,14 +240,44 @@ margin-bottom: .5em;
   left: 10%; 
 }
 .x-axis-labels{
-    gap: 1em;
+    gap: 1.3em;
     align-items: center;
 }
-.curve-image{
+.curve-image img{
+    position:absolute;
+    width: 90%;
+    
+}
+.curve-image img:first-of-type{
+    left: 30px;
+    top: 50px;
+}
+.curve-image img:last-of-type{
+    left: 20px;
+    top: 55px;
+}
+.chart-note{
+    color:var(--white-100);
+    text-align: center;
+    font-size: .4rem;
+    background-color: var(--black-100);
+    padding: 4px 6px;
+    border-radius: 4px;
     position: absolute;
-    bottom: 28%;
-    width: 80%;
-    right: 20px;
+    top:45%;
+    right:75px;
+}
+.chart-dot{
+    border: 3px solid var(--white-100);
+    background-color: var(--secondary-blue);
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    filter: drop-shadow(--shadow);
+    position: absolute;
+    top:64px;
+    right: 80px;
+    z-index: 1;
 }
 /* TRAFFIC BY WEBSITE */
 .chart,
@@ -279,13 +299,14 @@ margin-bottom: .5em;
 font-size: 0.875rem;
 font-weight: 600;
 line-height: 20px;
+margin-bottom: 1em;
 }
 .socials p{
 font-size: 0.75rem;
 line-height: 18px;
 }
 .socials>div{
-    margin-top: .8em;
+    margin-top: 1em;
 }
 .socials .bar {
   height: 8px;
@@ -309,11 +330,6 @@ line-height: 18px;
 }
 .socials .dark::before{
     background-color: var(--black-100);
-}
-.traffic-by-device h2, 
-.traffic-by-location h2,
-.marketing h2{
-    margin-bottom: 1em;
 }
 .progress-bar-container {
   display: flex;
@@ -437,6 +453,7 @@ body.dark-mode{
 }
 .dark-mode .search-container input,
 .dark-mode .pages-sub-dropdown a:nth-child(2),
+.dark-mode .bar,
 .dark-mode .bar::before{
     background-color: var(--white-10);
 }
