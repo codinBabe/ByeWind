@@ -34,7 +34,10 @@ function toggleUserProfile() {
 
 document.querySelector('#logo').addEventListener('click', toggleMenu);
 document.querySelector('#collape').addEventListener('click', toggleUserProfile);
-document.querySelector('#toggle').addEventListener('click', toggleDarkMode);
+document.querySelectorAll('.toggle').forEach(toggleElement => {
+    toggleElement.addEventListener('click', toggleDarkMode);
+});
+// document.querySelector('.toggle').addEventListener('click', toggleDarkMode);
 
 //draw doughnut chart 
 const canvas = document.getElementById("myCanvas");
