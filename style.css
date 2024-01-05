@@ -104,7 +104,7 @@ line-height: 20px;
 color: var(--black-40);
 }
 .dot p{
-    margin: .5em;
+    margin: .8em;
     position: relative;
 }
 .dropdown-menu .dot p::before, .dropdown-menu div:nth-child(1) p:last-child{
@@ -120,47 +120,109 @@ color: var(--black-40);
 font-weight: 400;
 font-size: 0.875rem;
 line-height: 20px;
+margin-bottom: .5em;
 }
-.dropdown-menu .dot, .dropdown-content{
+.dropdown-menu, .dot, .dropdown-content{
     margin-bottom: 1.5em;
 }
 .dropdown-content a{
     display: flex;
     align-items: center;
     gap: .5em;
-    margin-bottom: .3em;
+    margin-bottom: .5em;
 }
 .dropdown-content a::before{
     content: url('./images/ArrowLineRight2.svg');
     margin-right: .1em;
 }
 .pages-sub-dropdown{
-    display: flex;
-    flex-direction: column;
-    margin-left: 3.4em;
+    width: 60%;
+    text-align: center;
+    /* margin-left: .6em; */
 }
 .pages-sub-dropdown a{
-    margin: .3em 0;
+    display: block;
+    padding: .3em;
+    position: relative;
+}
+.pages-sub-dropdown a:last-child{
+    margin-right: .6em;
 }
 .pages-sub-dropdown a::before{
     content: none;
 }
-.pages-sub-dropdown a:nth-child(2){
-border-radius: 8px;
-background-color: var(--black-5);
-padding: .2em 0;
+
+.pages-sub-dropdown a.project {
+    margin-left: -1em;
+    background-color: var(--black-5);
+    border-radius: 8px;
+}
+.pages-sub-dropdown a.project::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 5px;
+    height: 16px;
+    width: 4px;
+    border-radius: 3px;
+    background-color: var(--black-100);
 }
 /* CENTER SECTION STYLING */
+.center{
+    display: grid;
+    grid-template-areas:
+    'today'
+    'subgrid-1'
+    'subgrid-2'
+    'subgrid-3'
+    'subgrid-4'
+    'chart'
+    'socials'
+    'device'
+    'location'
+    'marketing';
+    grid-auto-columns: 1fr;
+    gap: 0 1.5em;
+  }
+  .center h2{
+    grid-area: today;
+    color: var(--black-100);
+    font-size: .875rem;
+    font-weight: 600;
+    line-height: 20px;
+    margin-top: 1.5em;
+    display: flex;
+  }
+  .sub-grid-1{
+    grid-area: subgrid-1;
+  }
+  .sub-grid-2{
+    grid-area: subgrid-2;
+  }
+
+  .sub-grid-3{
+    grid-area: subgrid-3;
+  }
+.sub-grid-4{
+    grid-area: subgrid-4;
+  }
+  .chart{
+    grid-area: chart;
+  }
+  .socials{
+    grid-area: socials;
+  }
+  .traffic-by-device{
+    grid-area: device;
+  }
+  .traffic-by-location{
+    grid-area: location;
+  }
+  .marketing{
+    grid-area: marketing;
+  }
 .center > h2::after, .logo::after{
     content: url('./images/ArrowLineDown2.svg');
-}
-.center>h2{
-color: var(--black-100);
-font-size: .875rem;
-font-weight: 600;
-line-height: 20px;
-margin-top: 1.5em;
-display: flex;
 }
 .sub-grid{
 border-radius: 16px;
@@ -179,7 +241,6 @@ line-height: 20px;
 }
 .sub-grid h4{
 font-size: 0.875rem;
-margin-bottom: 1em;
 }
 .sub-grid h2{
     font-size: 1.5rem;
@@ -189,6 +250,10 @@ margin-bottom: 1em;
 }
 .no-gap{
     gap: .2em;
+    align-self: flex-end;
+}
+.top{
+    margin-top: -1em;
 }
 /* CHART STYLING */
 .chart, .curve-image{
@@ -205,7 +270,7 @@ margin-bottom: .5em;
 .chart-headings:first-of-type p:not(:first-child){
     color: var(--black-40);
 }
-.dot2 p{
+.dot2 p, .y-axis-labels p{
     position: relative;
 }
 .dot2 p:not(:last-child):before{
@@ -230,9 +295,6 @@ margin-bottom: .5em;
 .y-axis-labels{
     flex-direction: column;
     gap: .8em;
-}
-.y-axis-labels p{
-    position: relative;
 }
 .y-axis-labels p::after{
   content: '';
@@ -278,7 +340,6 @@ margin-bottom: .5em;
     border-radius: 50%;
     width: 10px;
     height: 10px;
-    filter: drop-shadow(--shadow);
     position: absolute;
     top:64px;
     right: 80px;
@@ -306,7 +367,7 @@ font-weight: 600;
 line-height: 20px;
 margin-bottom: 1em;
 }
-.socials p{
+.socials p, .sub-grid p{
 font-size: 0.75rem;
 line-height: 18px;
 }
@@ -384,6 +445,9 @@ line-height: 18px;
     left: 50%;
     background-color: var(--secondary-green);
     height: 55px;
+}
+.traffic-by-location .no-gap{
+    gap: 0;
 }
 .location>p, .percentage p{
     font-size: 0.75rem;
@@ -467,10 +531,10 @@ body.dark-mode{
 }
 .dark-mode .dropdown-content img, 
 .dark-mode .navbar img,
-.dark-mode .dropdown-content a::before,
+.dark-mode .dropdown-content >a::before,
 .dark-mode .center h2::after,
 .dark-mode .curve-image img,
-.dark-mode .left img:not(:first-child), .dark-mode .left .snow{
+.dark-mode .left img:not(:first-child), .dark-mode .left .snow, .dark-mode .logo::after{
     filter: invert(1);
 }
 .dark-mode .chart,
@@ -494,7 +558,8 @@ body.dark-mode{
 .dark-mode .mac{
     background-color: var(--secondary-green);
 }
-.dark-mode .ios{
+.dark-mode .ios,
+.dark-mode .pages-sub-dropdown a.project::before{
     background-color: var(--secondary-purple);
 }
 .dark-mode .location p:nth-child(1)::before{
@@ -517,6 +582,74 @@ body.dark-mode{
   .container {
     max-width: 768px; 
   }
+  /* .nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navbar{
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+  }
+  .navbar input{
+    width: 100%;
+  }
+  */
+  .search-icon{
+    left: 20%;
+  }
+  .pages-sub-dropdown{
+    width: 33%;
+}
+  .center{
+    grid-template-areas:
+    'today     today'
+    'subgrid-1 subgrid-2'
+    'subgrid-3 subgrid-4'
+    'chart     chart'
+    'socials   socials'
+    'device    device'
+    'location  location'
+    'marketing marketing';
+  }
+.y-axis-labels p, .x-axis-labels p{
+    font-size: 0.55rem;
+  }
+.chart-headings{
+    font-size: 0.65rem;
+    gap: 1.8em;
+}
+.chart-container{
+    margin-top: 1em;
+}
+.chart-container .y-axis-labels{
+    gap: 1.5em;
+}
+.chart-container .x-axis-labels{
+    gap: 4em;
+}
+.dot2 p:not(:last-child):before{
+    top: 40%;
+}
+.chart-dot{
+    right: 168px;
+    top: 80px;
+}
+.chart-note{
+    right: 150px;
+    top: 35%;
+    padding: 4px 8px;
+    font-size: 0.75rem;
+    border-radius: 8px;
+}
+.curve-image{
+    left: 20px;
+    bottom: 0;
+}
+.traffic-by-device .x-axis-labels{
+    gap: 3em;
+}
 
 }
 
@@ -550,7 +683,10 @@ body.dark-mode{
     gap: 1.5em;
   }
   .navbar input{
-    width: auto;
+    width: 100%;
+  }
+  .search-icon{
+    left: 1%;
   }
   .left{
     flex: 1;
@@ -563,52 +699,22 @@ body.dark-mode{
     gap: 1em;
     margin-bottom: 1em;
   }
+  .pages-sub-dropdown{
+    width: 100%;
+}
+  
   .left .snow{
-    margin: 16em 0 0;
+    margin: 15em 0 0;
   }
   .center{
     flex: 2;
     padding:.5em 2em;
-    display: grid;
     grid-template-areas:
     'today     today     today     today'
     'subgrid-1 subgrid-2 subgrid-3 subgrid-4'
     'chart     chart     chart     socials'
     'device    device    location  location'
     'marketing marketing marketing marketing';
-    grid-auto-columns: 1fr;
-    gap: 0 1.5em;
-  }
-  .center h2{
-    grid-area: today;
-  }
-  .sub-grid-1{
-    grid-area: subgrid-1;
-  }
-  .sub-grid-2{
-    grid-area: subgrid-2;
-  }
-
-  .sub-grid-3{
-    grid-area: subgrid-3;
-  }
-.sub-grid-4{
-    grid-area: subgrid-4;
-  }
-  .chart{
-    grid-area: chart;
-  }
-  .socials{
-    grid-area: socials;
-  }
-  .traffic-by-device{
-    grid-area: device;
-  }
-  .traffic-by-location{
-    grid-area: location;
-  }
-  .marketing{
-    grid-area: marketing;
   }
   .y-axis-labels p, .x-axis-labels p{
     font-size: 0.75rem;
